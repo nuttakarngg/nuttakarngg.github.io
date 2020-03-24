@@ -236,13 +236,13 @@
                 var longitude ;
                 var urls = 'https://www.google.com/maps/d/embed?mid=1aITqcBuTzpH8DivC_DVSFPm9taT3_BZW';
                for(var i = 0 ; i<245;i++){
-                  if(countries==last[i].name){
+                  if(countries.toUpperCase()==last[i].name.toUpperCase()){
                     latitude = last[i].latitude;
                     longitude = last[i].longitude;
                      
                      urls = "https://www.google.com/maps/d/embed?mid=1aITqcBuTzpH8DivC_DVSFPm9taT3_BZW&ll="+latitude+a+longitude+b;
                      console.log(urls);
-                     $(document).ready(function(){
+                     $('#map').ready(function(){
                         $('#map').attr("src",urls);
                      })
                     
